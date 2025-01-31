@@ -2,7 +2,12 @@ class Pila<T>(val desc: String) {
 
     private val elementos = mutableListOf<T>()
 
-    constructor(desc: String, vararg elemento: T): this(desc)
+    constructor(desc: String, vararg elementos: T): this(desc){
+        for (elemento in elementos){
+            this.elementos.add(elemento)
+        }
+        //this.elementos.addAll(elementos)
+    }
 
 
     private fun size() = elementos.size
