@@ -48,7 +48,7 @@ class Pila<T>(val desc: String, private val patron: String = "") {
 
     override fun toString(): String {
         return if (!isEmpty()){
-            "Pila(\"$desc\", elementos = ${elementos.reversed().joinToString { " - " }})"
+            "Pila(\"$desc\", elementos = ${elementos.reversed().joinToString(" - ")})"
         }else{
             "Pila(\"$desc\", **Vacía**)"
         }
